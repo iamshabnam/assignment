@@ -37,6 +37,7 @@ class HomeController extends GetxController with GetSingleTickerProviderStateMix
       onShowBottomSheet();
       isBottomSheetOpened(true);
     }
+    whatToSearch('');
   }
 
   /// Below is the getter to populate search result according
@@ -67,6 +68,7 @@ class HomeController extends GetxController with GetSingleTickerProviderStateMix
       if (bottomSheetController?.status == AnimationStatus.reverse) {
         isBottomSheetOpened(false);
       }
+      whatToSearch('');
     });
     super.onInit();
   }
